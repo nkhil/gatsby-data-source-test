@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import hero from '../../static/hero.jpg'
+import moment from 'moment'
 
 export default ({data}) => (
   <Layout>
@@ -35,6 +36,7 @@ export default ({data}) => (
               >
                 {node.frontmatter.title}
               </h3>
+              <p>{moment(node.frontmatter.date).format('MMMM Do, YYYY')}</p>
               <p>{node.excerpt}</p>
             </Link>
           </li>
@@ -58,6 +60,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            date
           }
           fields {
             slug
