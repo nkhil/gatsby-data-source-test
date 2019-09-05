@@ -1,6 +1,7 @@
 ---
 title: "Seahawks Blog Post #4"
 date: "2019-09-02"
+posttype: 'blog'
 ---
 
 There are those who believe that life here began out there... far across the universe, with tribes of humans who may have been the forefathers of the Egyptians or the Toltecs or the Mayans. Some believe that there may yet be brothers of man who even now fight to survive somewhere beyond the heavens. Fleeing from the Cylon Tyranny, the last Battlestar - Galactica - leads a rag-tag fugitive fleet on a lonely quest. A shining planet, known as Earth.

@@ -1,6 +1,7 @@
 ---
 title: "Seahawks Blog Post #1"
 date: "2019-09-04"
+posttype: 'blog'
 ---
 ![alt text](https://cdn.theathletic.com/app/uploads/2019/09/03184219/GettyImages-1167118891-1024x683.jpg "Logo Title Text 1")
 The Seattle Seahawks are a professional American football franchise based in Seattle, Washington. The Seahawks compete in the National Football League (NFL) as a member club of the league's National Football Conference (NFC) West division. 

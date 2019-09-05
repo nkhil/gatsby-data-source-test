@@ -1,6 +1,7 @@
 ---
 title: "Seahawks Blog Post #5"
 date: "2019-09-02"
+posttype: 'blog'
 ---
 
 Don't go to bed, with no price on your head. No, no, don't do it. Fon't do the crime, if you can't do the time, yeah, don't do it. And keep your eye on the sparrow, when the going gets narrow. Don't do it, don't do it. Where can I go where the cold winds don't blow, Now. Well, well, well.

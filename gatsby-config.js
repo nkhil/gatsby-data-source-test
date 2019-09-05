@@ -11,6 +11,13 @@ module.exports = {
         path: `${__dirname}/src/content/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/content/projects`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
     {
