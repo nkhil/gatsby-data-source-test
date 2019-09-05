@@ -11,7 +11,7 @@ gatsby develop` (to start the development server)
 
 ## Description 
 
-This repo is a test for rendering different content types using separate page templates. 
+This repo is a test for rendering different content types using separate page templates. I used the [official docs](https://www.gatsbyjs.org/tutorial/part-four/) and [this really useful blog post](https://desktopofsamuel.com/gatsby-website-with-multiple-post-types).
 
 In this repo, I've got `blog` and `project` as the two different content types. I'm using a simple `type` property in the frontmatter of the markdown file to differentiate a blog from a project. 
 
