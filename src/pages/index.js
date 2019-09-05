@@ -9,8 +9,7 @@ import moment from 'moment'
 export default ({data}) => (
   <Layout>
     {console.log('data \n', data)}
-    {/* <h1>Amazing {data.site.siteMetadata.title}</h1> */}
-    <h1>Hi, I'm Nikhil</h1>
+    <h1>Amazing {data.site.siteMetadata.title}</h1>
     <div>
       <img
         src={hero}
@@ -20,10 +19,10 @@ export default ({data}) => (
     <div>
       <h2>Blog Posts</h2>
       <ul>
-        {data.allMarkdownRemark.edges.map(({node}) => (
-          <li key={node.id}>
+        {data.blog.edges.map((post, i) => (
+          <li key={i}>
              <Link
-              to={node.fields.slug}
+              to={post.node.fields.slug}
               css={css`
                 text-decoration: none;
                 color: inherit;
@@ -34,15 +33,40 @@ export default ({data}) => (
                   margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                {node.frontmatter.title}
+                {post.node.frontmatter.title}
               </h3>
-              <p>{moment(node.frontmatter.date).format('MMMM Do, YYYY')}</p>
-              <p>{node.excerpt}</p>
+              <p>{moment(post.node.frontmatter.date).format('MMM Do, YYYY')}</p>
+              <p>{post.node.excerpt}</p>
             </Link>
           </li>
         ))} 
       </ul>
-
+    </div>
+    <div>
+      <h2>Projects</h2>
+      <ul>
+        {data.projects.edges.map((post, i) => (
+          <li key={i}>
+             <Link
+              to={post.node.fields.slug}
+              css={css`
+                text-decoration: none;
+                color: inherit;
+              `}
+            >
+              <h3
+                css={css`
+                  margin-bottom: ${rhythm(1 / 4)};
+                `}
+              >
+                {post.node.frontmatter.title}
+              </h3>
+              <p>{moment(post.node.frontmatter.date).format('MMM Do, YYYY')}</p>
+              <p>{post.node.excerpt}</p>
+            </Link>
+          </li>
+        ))} 
+      </ul>
     </div>
   </Layout>
 )
@@ -54,7 +78,28 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    blog: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fileAbsolutePath: {regex: "/blog\/.*md$/"}}
+      ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fileAbsolutePath: {regex: "/projects\/.*md$/"}}
+      ) {
       edges {
         node {
           id

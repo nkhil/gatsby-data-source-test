@@ -7,6 +7,7 @@ export default ({data}) => {
   return (
     <Layout>
       <div>
+        <p>This is a project page</p>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
@@ -15,7 +16,7 @@ export default ({data}) => {
 }
 
 export const query = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ProjectPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
