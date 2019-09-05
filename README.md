@@ -5,7 +5,7 @@
 ```
 git clone https://github.com/nkhil/gatsby-data-source-test.git
 cd gatsby-data-source-test
-npm i (to instal dependencies)
+npm i (to install dependencies)
 gatsby develop` (to start the development server)
 ```
 
