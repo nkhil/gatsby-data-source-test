@@ -9,8 +9,7 @@ import moment from 'moment'
 export default ({data}) => (
   <Layout>
     {console.log('data \n', data)}
-    {/* <h1>Amazing {data.site.siteMetadata.title}</h1> */}
-    <h1>Hi, I'm Nikhil</h1>
+    <h1>Amazing {data.site.siteMetadata.title}</h1>
     <div>
       <img
         src={hero}
