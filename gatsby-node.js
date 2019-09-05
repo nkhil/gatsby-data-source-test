@@ -28,11 +28,13 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const blogTemplate = path.resolve(`./src/templates/blog.js`);
+  const projectTemplate = path.resolve(`./src/templates/project.js`);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/blog.js`),
+      component: blogTemplate,
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
