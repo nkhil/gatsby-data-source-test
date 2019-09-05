@@ -1,7 +1,7 @@
 ---
 title: "Seahawks Blog Post #3"
 date: "2019-09-02"
-posttype: 'blog'
+type: 'blog'
 ---
 
 Hot dogs, Armour hot dogs. What kind of kids eat Armour hot dogs? Fat kids, skinny kids, kids who climb on rocks. Tough kids, sissy kids, even kids with chicken pox love hot dogs, Armour hot dogs... The dogs kids love to bite!

@@ -1,8 +1,8 @@
 ---
 title: "Project post #1"
 date: "2019-09-05"
+type: 'work'
 description: 'this is a quick summary about the project'
-posttype: 'work'
 ---
 
 My bologna has a first name, it's O-s-c-a-r. My bologna has a second name, it's M-e-y-e-r. Oh, I love to eat it every day, and if you ask me why, I'll say: 'cuz Oscar Meyer has a way with b-o-l-o-g-n-a. How's that?
