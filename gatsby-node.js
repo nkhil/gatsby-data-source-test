@@ -20,6 +20,11 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              title
+              date
+              type
+            }
             fields {
               slug
             }
@@ -32,14 +37,27 @@ exports.createPages = async ({ graphql, actions }) => {
   const projectTemplate = path.resolve(`./src/templates/project.js`);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: blogTemplate,
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
+    console.log('NODE \n', node.frontmatter);
+    if(node.frontmatter.type === 'work'){
+      createPage({
+        path: node.fields.slug,
+        component: projectTemplate,
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.fields.slug,
+        },
+      })
+    } else {
+      createPage({
+        path: node.fields.slug,
+        component: blogTemplate,
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.fields.slug,
+        },
+      })
+    }
   })
 }
