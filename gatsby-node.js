@@ -37,7 +37,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const projectTemplate = path.resolve(`./src/templates/project.js`);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    console.log('NODE \n', node.frontmatter);
     if(node.frontmatter.type === 'work'){
       createPage({
         path: node.fields.slug,
