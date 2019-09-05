@@ -3,9 +3,10 @@
 ## Setup
 
 ```
-`git clone https://github.com/nkhil/gatsby-data-source-test.git`
-`cd gatsby-data-source-test`
-`gatsby develop` (to start the development server)
+git clone https://github.com/nkhil/gatsby-data-source-test.git
+cd gatsby-data-source-test
+npm i (to instal dependencies)
+gatsby develop` (to start the development server)
 ```
 
 ## Description 
